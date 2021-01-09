@@ -4,11 +4,11 @@ import axios from "axios";
 
 export default function Weather() {
 const [city, setCity] = useState("");
-  const [loaded, setLoaded] = useState(false);
+  
   const [weather, setWeather] = useState({});
 
   function displayWeather(response) {
-    setLoaded(true);
+  
     console.log(response.data);
     setWeather({
       description: response.data.weather[0].description,
