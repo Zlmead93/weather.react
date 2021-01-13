@@ -10,11 +10,11 @@ function App() {
        <Weather />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/Zlmead93/weather.react"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Github
         </a>
       </header>
     </div>
