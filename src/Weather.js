@@ -1,64 +1,53 @@
-import React, {useState} from "react";
-import axios from "axios";
-
+import React from "react";
+import "./Weather.css";
 
 export default function Weather() {
-const [city, setCity] = useState("");
-  const [loaded, setLoaded] = useState(false);
-  const [weather, setWeather] = useState({});
-
-  function displayWeather(response) {
-    setLoaded(true);
-    console.log(response.data);
-    setWeather({
-      description: response.data.weather[0].description,
-      temperature: response.data.main.temp,
-      wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    });
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const apiKey = "5dbe4b73ade41818331f8e929d9c90fe";
-    const unit = "metric";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-
-    axios.get(apiUrl).then(displayWeather);
-  }
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
-
-  let form = (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="Search"
-        onChange={updateCity}
-        placeholder="Enter a city..."
-      />
-      <input type="Submit" />
-    </form>
-  );
-
-  if (loaded) {
-    return (
-      <div className="form">
-        {form}
-        <ul>
-          <li> Temperature: {Math.round(weather.temperature)} ℃</li>
-          <li>Description: {weather.description}</li>
-          <li>Wind: {Math.round(weather.wind)} km/h </li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+return (
+  <div className= "Weather">
+    <form>
+      <div className="row">
+        <div className = "col-9">
+          <input 
+          type = "search"
+          placeholder = "Enter a city"
+          className="form-control"/>
+        </div>
+        <div className = "col-3">
+          <input
+          type= "submit"
+          value= "Search"
+          className = "btn btn-info"/>
+        </div>
       </div>
-    );
-  } else {
-    return form;
-  }
-}
+    </form>
+    
+   <h1>London</h1>
+        <ul><li className="date">
+          Saturday 16:23</li>
+          <li className = "description">Mostly Cloudy</li></ul>
+          <div className= "row">
+            <div className = "col-6">
+              <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"/>
+              6°
+            </div>
+            <div className="col-6">
+              <ul><li>
+                Precipitation: 11%
+                </li>
+                <li>
+                  Humidity: 2%</li>
+                  <li>Wind: 10 mph</li></ul>
+            </div>
+          </div>
+
+       
+       
+        <a
+          className="App-link"
+          href="https://github.com/Zlmead93/weather.react"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Coded by ZLM - Github
+        </a>
+      </div> ); }

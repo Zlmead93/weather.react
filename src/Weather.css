@@ -1,0 +1,33 @@
+.Weather {
+  border: 1px solid #000;
+}
+.Weather h1 {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 200;
+}
+
+.Weather li {
+  list-style: none;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 200;
+}
+.date {
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 200;
+}
+
+.container {
+  background-color: #000;
+  display: block;
+  padding: 10px;
+  max-width: 600px;
+  max-height: 600px;
+  border: 1px solid;
+  border-radius: 20px;
+  color: #fff;
+  margin: 30px auto;
+}
+.App-link {
+  color: #fff;
+}
