@@ -4,6 +4,7 @@
 .Weather h1 {
   font-family: "Source Code Pro", monospace;
   font-weight: 200;
+  margin: 0 0 0 0;
 }
 
 .Weather li {
@@ -11,10 +12,21 @@
   font-family: "Source Code Pro", monospace;
   font-weight: 200;
 }
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+.Weather .temp {
+  font-size: 50px;
+}
 .date {
   font-size: 20px;
   font-family: "Source Code Pro", monospace;
   font-weight: 200;
+  text-align: left;
+}
+.Weather form {
+  margin-bottom: 20px;
 }
 
 .container {
