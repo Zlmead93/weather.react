@@ -1,5 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
+
 
 export default function WeatherInfo (props){
   return (
@@ -12,8 +14,8 @@ export default function WeatherInfo (props){
               <div className = "clearfix">
               <img src={props.data.iconUrl} className= "float-left" alt={props.data.description}/>
               <div className= "float-left">
-                <span className="temp">{Math.round(props.data.temp)}</span>
-              °C
+                <WeatherTemperature celsius={props.data.temp}/>
+              
             </div>
             </div>
              </div>
@@ -25,15 +27,12 @@ export default function WeatherInfo (props){
                   Humidity: {Math.round(props.data.humidity)}%</li>
                   <li>Wind: {Math.round(props.data.wind)} Km/h</li></ul>
             </div>
+            
           </div>
-          <a
-          className="App-link"
-          href="https://github.com/Zlmead93/weather.react"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Coded by ZLM - Github
-        </a>
+
+         
+
+         
       </div>);  
       
 }
