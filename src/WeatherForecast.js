@@ -28,5 +28,5 @@ const [forecast,setForecast] = useState (null);
     let apiKey = "5dbe4b73ade41818331f8e929d9c90fe"
     let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`
 axios.get(url).then(handleForecastResponse);
-    return null; }
+    return props.city; }
 }
