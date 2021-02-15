@@ -10,7 +10,7 @@ export default function WeatherForecastPreview (props) {
     }
     function temp() {
         let temp = Math.round(props.data.main.temp);
-   return `${temp}°C` 
+   return `${temp}°C`; 
 }
 return (
     <div className = "WeatherForecastPreview">
